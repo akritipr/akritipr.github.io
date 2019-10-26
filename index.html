@@ -4,13 +4,15 @@
 <head>
     <title>Akriti Prasad</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="http://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Cover Page -->
-    <header class="background">
+    <header class="background" id="background-scroll">
         <div class="cover-page-content" id="cover">
             <div class="header">
                 <p>
@@ -18,49 +20,18 @@
                 </p>
             </div>
             <div class="description">
-                <p>Front-End Developer</p><img src="./images/heart-1.png" class="work-heart">
+                <p>Front-End Engineer</p><img src="./images/heart-1.png" class="work-heart">
                 <p>@ Morgan Stanley</p>
             </div>
         </div>
     </header>
-    <section class="body-section">
-        
-        <!-- Side Tabs -->
-        <!-- <section class="tabs hide-lg">
-                <div class="tab-container container-content full-width">
-                    <div id="profile" class="tab-elem tab-active">
-                        <i class="fas fa-user"></i>
-                        <p class="hide-sm">Profile</p>
-                    </div>
-                    <div id="experience" class="tab-elem">
-                        <i class="fas fa-chart-line"></i>
-                        <p class="hide-sm">Experience</p>
-                    </div>
-                    <div id="skills" class="tab-elem">
-                        <i class="fas fa-chart-bar"></i>
-                        <p class="hide-sm">Skills</p>
-                    </div>
-                    <div id="education" class="tab-elem">
-                        <i class="fas fa-graduation-cap"></i>
-                        <p class="hide-sm">Education</p>
-                    </div>
-                    <div id="interests" class="tab-elem">
-                        <i class="fas fa-running"></i>
-                        <p class="hide-sm">Interests</p>
-                    </div> 
-                    <div id="contact" class="tab-elem">
-                        <i class="fas fa-address-card"></i>
-                        <p class="hide-sm">Contact</p>
-                    </div>
-        
-                </div>
-            </section> -->
+    <section id="section-scroll" class="body-section">
         <!-- Tabs -->
-    <section class="tabs">
+        <section class="tabs">
             <div class="tab-container container-content full-width">
                 <div id="profile" class="tab-elem tab-active">
                     <i class="fas fa-user"></i>
-                    <p class="hide-sm">Profile</p>
+                    <p class="hide-sm">About Me</p>
                 </div>
                 <div id="experience" class="tab-elem">
                     <i class="fas fa-chart-line"></i>
@@ -78,35 +49,58 @@
                     <i class="fas fa-running"></i>
                     <p class="hide-sm">Interests</p>
                 </div> -->
-                <div id="contact" class="tab-elem">
+                <!-- <div id="contact" class="tab-elem">
                     <i class="fas fa-address-card"></i>
                     <p class="hide-sm">Contact</p>
-                </div>
-    
+                </div> -->
+
             </div>
         </section>
-    
+
         <!-- Tab Content -->
         <section class="tab-content">
             <div class="tab-container container-content full-width">
                 <!-- Tab Content : Profile-->
                 <div id="profile-content" class="tab-content-elem full-width">
-                    <div class="tab-content-inner full-width">
-                        <p class="text-md">
-                            I am a front-end engineer with 5 years of experience. A graduate from the State University of
-                            New York at Buffalo, I am proficient in web development technologies like JavaScript,
-                            TypeScript, Angular, ReactJS, Node.js, jQuery, Java, and hybrid mobile development using the
-                            Ionic framework along with HTML and CSS using BitBucket, Git, Gulp. I am familiar with Python,
-                            Redux, and have worked on data visualization like R and D3 JS.
-    
+                    <div class="tab-content-inner full-width text-md">
+                        <p class="para-gap">
+                            I have ~6 years of experience working as a front-end engineer, creating responsive websites
+                            glued and made live with high quality, cross-browser compatible, reusable, and maintable
+                            code base.
+                        </p>
+                        <p class="para-gap">
+                            I work on an Agile based environment
+                            Tools such as Sass, Grunt, and NPM are a few I use to speed up development of my front-end
+                            build process.
+                        </p>
+                        <p class="para-gap">
+                            I have also worked on Java, and devloped APIs in my initial years of experience which has
+                            increased my knowledge of integration with server.
+                            with and developing server-side, as well as knowing how to efficiently project manage and
+                            work with clients and colleagues successfully.
+                        </p>
+                        <p class="para-gap">
+                            I believe in an environment which supports and focuses on peer-learning, easy-communication,
+                            and knowledge-sharing. Such ambience definitely leads to increased
+                            productivity, builds a trust among the team, and creates a helpful and comfortable
+                            atmosphere. My goal is to explore the
+                            entire spectrum of front-end, and work on ambitious projects with highly motivated and
+                            collaborative individual.
+                        </p>
+                        <p class="para-gap">
+                            A customer-focused, articulate and analytical engineer who has a dream to bring home the Six
+                            Star medal one day. I enjoy running a lot! Most of the time I go alone listening to podcasts
+                            or running in a group while
+                            I am training for a marathon or a half. I am against sitting idle at home, unless I have
+                            just ran a marathon, so I sign up for new classes every weekend.
                         </p>
                     </div>
-    
+
                 </div>
-    
+
                 <!-- Tab Content : Experience-->
                 <div id="experience-content" class="tab-content-elem full-width">
-                    <div class="tab-content-inner">
+                    <div class="tab-content-inner full-width">
                         <div class="tab-content-container">
                             <p class="text-lg tab-content-heading">
                                 <span class="company">Morgan Stanley</span>
@@ -115,14 +109,18 @@
                             </p>
                             <div class="text-md tab-content-desc">
                                 <ul>
-                                    <li>Design and developed Sales tool, using Angular, Bootstrap, HTML and CSS. This tool
-                                        provides traders and clients real-time information on different Bids/ Offers.</li>
+                                    <li>Design and developed Sales tool, using Angular, Bootstrap, HTML and CSS. This
+                                        tool
+                                        provides traders and clients real-time information on different Bids/ Offers.
+                                    </li>
                                     <li> The app
-                                        consists of an amalgamation of real-time data from various server calls streaming
+                                        consists of an amalgamation of real-time data from various server calls
+                                        streaming
                                         from
                                         either WebSockets or Restful services, clubbed into a few customized grids with
                                         reusable
-                                        components which are created on top of Angular ag-Grid, using many features provided
+                                        components which are created on top of Angular ag-Grid, using many features
+                                        provided
                                         by
                                         the community moulded based on the user requirements. </li>
                                     <li> Increased efficiency of the
@@ -150,7 +148,8 @@
                                 <ul>
                                     <li>Developed a responsive frontend for a time-critical server monitoring and load
                                         balancing application to evaluate the health of development centers in different
-                                        geographical locations for a top-notch Telecom organization using HTML/HTML5, CSS3,
+                                        geographical locations for a top-notch Telecom organization using HTML/HTML5,
+                                        CSS3,
                                         JavaScript, JQuery and using ECMAScript 2015/ ES6 specifications. </li>
                                     <li>Developed responsive single page application using AngularJS v1 and later using
                                         Angular 2 merging them with Bootstrap. </li>
@@ -171,22 +170,26 @@
                             </p>
                             <div class="text-md tab-content-desc">
                                 <ul>
-                                    <li>Executed and contributed to full-stack web development projects, with an emphasis on
+                                    <li>Executed and contributed to full-stack web development projects, with an
+                                        emphasis on
                                         front-end features, browser manipulation, and cross-browser compatibility for a
-                                        customer-facing financial application for a large banking firm, while maintaining
+                                        customer-facing financial application for a large banking firm, while
+                                        maintaining
                                         the brand standards under the organization guideline.</li>
-                                    <li> Improved the performance of the application by fixing bugs and issues raised during
+                                    <li> Improved the performance of the application by fixing bugs and issues raised
+                                        during
                                         SIT and UAT. </li>
                                     <li> Increased efficiency of the
                                         product by adding features, like filtering, modal pop-up, grid updates. </li>
-                                    <li> Conducted several knowledge transfer sessions for new members of the team to make
+                                    <li> Conducted several knowledge transfer sessions for new members of the team to
+                                        make
                                         them familiar with the responsive web frameworks, UI best practices, and code
                                         standards</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
                 <!-- Tab Content : skills-->
                 <div id="skills-content" class="tab-content-elem full-width">
@@ -239,7 +242,7 @@
                             </div>
                             <div class="flex-fill">50%</div>
                         </div>
-    
+
                         <!-- icons -->
                         <div class="icons">
                             <i class="fab fa-html5"></i>
@@ -250,9 +253,9 @@
                             <i class="fab fa-git"></i>
                             <i class="fab fa-npm"></i>
                         </div>
-    
+
                     </div>
-    
+
                 </div>
                 <!-- Tab Content : education-->
                 <div id="education-content" class="tab-content-elem full-width">
@@ -285,8 +288,10 @@
                                     <span class="exp">April 2018 – May 2018 </span>
                                 </p>
                                 <div class="text-md tab-content-desc">
-                                    Using R, H1-B Kaggle dataset, made JSON to import into the visualization tool made using
-                                    JavaScript and D3.js by making a getJson request and deployed it on Heroku using Node.js
+                                    Using R, H1-B Kaggle dataset, made JSON to import into the visualization tool made
+                                    using
+                                    JavaScript and D3.js by making a getJson request and deployed it on Heroku using
+                                    Node.js
                                     and express.js.
                                 </div>
                             </div>
@@ -306,9 +311,12 @@
                                     <span class="exp">March 2018 – June 2018 </span>
                                 </p>
                                 <div class="text-md tab-content-desc">
-                                    Fetched data from Twitter feeds using Tweepy in Python for certain query parameters. The
-                                    data-set processed by Map Reduce program written in Java was made to run on Hadoop. The
-                                    reduce output was then used to produce visualization of the most frequently occurring
+                                    Fetched data from Twitter feeds using Tweepy in Python for certain query parameters.
+                                    The
+                                    data-set processed by Map Reduce program written in Java was made to run on Hadoop.
+                                    The
+                                    reduce output was then used to produce visualization of the most frequently
+                                    occurring
                                     words by using the Word Cloud visual index in D3.js
                                 </div>
                             </div>
@@ -318,7 +326,8 @@
                                     <span class="exp">Jan 2018 – Feb 2018 </span>
                                 </p>
                                 <div class="text-md tab-content-desc">
-                                    Analyzed flu epidemic trends in USA using large data sets from CDC and twitter feeds.
+                                    Analyzed flu epidemic trends in USA using large data sets from CDC and twitter
+                                    feeds.
                                     Used Jupyter Notebook to visualize the correlations of Twitter feed and CDC data.
                                 </div>
                             </div>
@@ -334,7 +343,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
                 <!-- Tab Content : interests-->
                 <!-- <div id="interests-content" class="tab-content-elem full-width">
@@ -342,18 +351,17 @@
     
                     </div>
     
-                </div> -->
-                <!-- Tab Content : contact-->
+                </div> 
+                Tab Content : contact
                 <div id="contact-content" class="tab-content-elem full-width">
                     <div class="tab-content-inner full-width">
-    
+
                     </div>
-    
-                </div>
+
+                </div>-->
             </div>
         </section>
     </section>
-    
     <script type="text/JavaScript" src="js/main.js"></script>
 </body>
 

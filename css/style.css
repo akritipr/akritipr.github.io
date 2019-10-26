@@ -120,6 +120,10 @@ body, html {
     overflow: hidden;
 }
 
+.para-gap{
+    margin-bottom: 15px;
+}
+
 /* Tabs Section*/
 .tabs{
     padding-top: 50px;

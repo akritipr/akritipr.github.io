@@ -9,19 +9,30 @@ const tabSelected = (val) => {
         const id = val.id;
         document.querySelector(`#${id}`).classList.remove("tab-active");
     });
-    const id = val.srcElement.id || val.target.parentElement.id;
-    document.querySelector(`#${id}`).classList.add("tab-active")
-    document.querySelector(`#${id}-content`).classList.add("show");
+    const tabSelectedId = val.srcElement.id || val.target.parentElement.id;
+    document.querySelector(`#${tabSelectedId}`).classList.add("tab-active")
+    document.querySelector(`#${tabSelectedId}-content`).classList.add("show");
+    if(tabSelectedId === "skills"){
+        addAnimationToSkills();
+    }
+};
+
+
+const addAnimationToSkills = () => {
+    const skillBars = document.querySelectorAll(".skill-flex");
+    skillBars.forEach((bars) => {
+         const barChildOne = bars.children[0];
+         const barChilTwo = bars.children[1].innerHTML;
+         barChildOne.style.width = barChilTwo;
+         barChildOne.style.transition = " width 5s ease";
+    });
+
 };
 
 tabElems.forEach(elem => elem.addEventListener('click', tabSelected));
-document.querySelector(`#profile-content`).classList.add("show");
+const profileContent = document.querySelector(`#profile-content`);
+profileContent.classList.add("show");
 
-// Handle on first scroll event to enable profile tab
-const header = document.getElementById("cover");
-
-header.addEventListener('scroll', val => {
-    var elmnt = document.getElementById("profile-content");
-    console.log("scroll");
-    elmnt.scrollIntoView();
+$(document).ready(function () {
+    $("html,body").animate({scrollTop: 0}, 1000);
 });

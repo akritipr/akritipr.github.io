@@ -22,9 +22,11 @@ const addAnimationToSkills = () => {
     const skillBars = document.querySelectorAll(".skill-flex");
     skillBars.forEach((bars) => {
          const barChildOne = bars.children[0];
-         const barChilTwo = bars.children[1].innerHTML;
-         barChildOne.style.width = barChilTwo;
-         barChildOne.style.transition = " width 5s ease";
+         const barChildTwo = bars.children[1].innerHTML;
+         barChildOne.style.width = "20%";
+         setTimeout(() => {
+             barChildOne.style.width = barChildTwo;
+         })
     });
 
 };

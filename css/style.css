@@ -323,8 +323,8 @@ body, html {
 
 /*side bar*/
 .aside{    
-    position: fixed;    
-    bottom: 11px;
+    position: fixed!important;    
+    top: 11px;
     right: 15px;
     width: 30px;
     font-size: 30px;
